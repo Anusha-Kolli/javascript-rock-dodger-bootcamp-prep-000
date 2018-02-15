@@ -10,7 +10,7 @@ const RIGHT_ARROW = 39 // use e.which!
 const ROCKS = []
 const START = document.getElementById('start')
 
-var gameInterval = null
+var gameInterval = null;
 
 /**
  * Be aware of what's above this line,
