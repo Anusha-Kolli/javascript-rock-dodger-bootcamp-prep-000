@@ -106,7 +106,7 @@ else if (top < GAME_HEIGHT) {
      * we should remove the rock from the DOM
      */
   }
-
+window.requestAnimationFrame(moveRock);
   // We should kick of the animation of the rock around here
 
   // Add the rock to ROCKS so that we can remove all rocks
