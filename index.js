@@ -58,7 +58,9 @@ function createRock(x) {
   window.requestAnimationFrame(moveRock);
 
  }
-
+ ROCKS.push(rock);
+ return rock;
+}
 /**
  * @param {string} p The position property
  * @returns {number} The position as an integer (without 'px')
