@@ -172,6 +172,14 @@ function moveDodgerLeft() {
 }
 
 function moveDodgerRight() {
+
+  var rightNumbers = DODGER.style.left.replace("px", "");
+   var rightSide = parseInt(rightNumbers, 10);
+  window.requestAnimationFrame(function() {
+    if (rightSide < 360) {
+       DODGER.style.left = `${rightSide + 4}px`;
+     }
+   });
   // implement me!
   /**
    * This function should move DODGER to the right
