@@ -17,9 +17,10 @@ function checkCollision(rock) {
   if (top > 360) {
     const dodgerLeftEdge = positionToInteger(DODGER.style.left);
 
-    const dodgerRightEdge = dodgerLeftEdge     + 40;
+    const dodgerRightEdge = dodgerLeftEdge + 40;
 
     const rockLeftEdge = positionToInteger(rock.style.left);
+
     const rockRightEdge =   rockLeftEdge + 20;
     if ((rockLeftEdge <= dodgerLeftEdge && rockRightEdge >= dodgerLeftEdge) ||
               (rockLeftEdge <= dodgerRightEdge && rockRightEdge >= dodgerRightEdge) ||
@@ -33,8 +34,8 @@ function checkCollision(rock) {
 function createRock(x) {
   const rock = document.createElement('div')
 
-  rock.className = 'rock'
-  rock.style.left = `${x}px`
+  rock.className = 'rock';
+  rock.style.left = `${x}px`;
   var top = 0
 
   rock.style.top = top;
