@@ -153,15 +153,13 @@ function moveDodger(e) {
 }
 
 function moveDodgerLeft() {
-  var leftNumbers = DODGER.style.left.replace("px", "");
-  var leftSide = parseInt(leftNumbers, 10);
-
-   window.requestAnimationFrame(function(){
-     // put all the move logic here
-    if (leftSide > 0) {
-       DODGER.style.left = `${leftSide - 4}px`;
-     }
-   });
+  var left = positionToInteger(DODGER.style.left);
+   function step() {
+    DODGER.style.left = `${left -= 4}px`;
+  }
+   if(left > 3) {
+ window.requestAnimationFrame(step);
+}
 
 
   // implement me!
