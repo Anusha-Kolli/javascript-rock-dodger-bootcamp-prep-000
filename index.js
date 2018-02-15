@@ -196,7 +196,7 @@ function positionToInteger(p) {
 }
 
 function start() {
-  window.addEventListener('keydown', moveDodger)
+  window.addEventListener('keydown', moveDodger);
 
   START.style.display = 'none';
 
