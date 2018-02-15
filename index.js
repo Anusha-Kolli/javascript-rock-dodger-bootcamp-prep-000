@@ -36,8 +36,13 @@ function checkCollision(rock) {
 
     // FIXME: The rock is 20 pixel's wide -- how do we get the right edge?
     const rockRightEdge =  positionToInteger(rock.style.left) + 20;
+    if ((rockLeftEdge <= dodgerLeftEdge && rockRightEdge >= dodgerLeftEdge) ||
+              (rockLeftEdge <= dodgerRightEdge && rockRightEdge >= dodgerRightEdge) ||
+               (rockLeftEdge >= dodgerLeftEdge && rockRightEdge <= dodgerRightEdge)) {
 
-    if (false /**
+                return true;
+               }
+     /**
                * Think about it -- what's happening here?
                * There's been a collision if one of three things is true:
                * 1. The rock's left edge is < the DODGER's left edge,
@@ -46,9 +51,8 @@ function checkCollision(rock) {
                *    and the rock's right edge is < the DODGER's right edge;
                * 3. The rock's left edge is < the DODGER's right edge,
                *    and the rock's right edge is > the DODGER's right edge
-               */) {
-      return true
-    }
+               */
+
   }
 }
 
@@ -61,7 +65,7 @@ function createRock(x) {
   // Hmmm, why would we have used `var` here?
   var top = 0
 
-  rock.style.top = top
+  rock.style.top = `${top}px`;
 
   /**
    * Now that we have a rock, we'll need to append
