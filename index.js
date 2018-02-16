@@ -70,7 +70,7 @@ function endGame() {
   window.removeEventListener('keydown', moveDodger);
   alert("YOU LOSE!");
  }
- 
+
 function moveDodger(e) {
     if(e.which === LEFT_ARROW) {
          e.preventDefault();
@@ -86,7 +86,13 @@ function moveDodger(e) {
 
 function moveDodgerLeft() {
 
-
+  var left = positionToInteger(DODGER.style.left);
+   function step() {
+    DODGER.style.left = `${left -= 4}px`;
+   }
+   if(left > 3) {
+  window.requestAnimationFrame(step);
+}
 
 
 
