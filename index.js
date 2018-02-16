@@ -29,7 +29,7 @@ function checkCollision(rock) {
                 return true;
                }
   }
-}
+ GAME.appendChild(rock);
 
 function createRock(x) {
   const rock = document.createElement('div')
