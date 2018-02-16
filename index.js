@@ -70,7 +70,7 @@ function endGame() {
   window.removeEventListener('keydown', moveDodger);
   alert("YOU LOSE!");
  }
-  function moveDodger(e) {
+function moveDodger(e) {
     if(e.which === LEFT_ARROW) {
          e.preventDefault();
          e.stopPropagation();
