@@ -105,17 +105,6 @@ function moveDodgerRight() {
 
 
 }
-
-
-
-
-
-
-      }
-
-
-
-  }
 /**
  * @param {string} p The position property
  * @returns {number} The position as an integer (without 'px')
