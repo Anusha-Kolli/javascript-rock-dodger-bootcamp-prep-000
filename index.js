@@ -60,6 +60,16 @@ function createRock(x) {
  ROCKS.push(rock);
  return rock;
 }
+function endGame() {
+  clearInterval(gameInterval);
+
+  ROCKS.forEach(function(rock) {
+    rock.remove();
+  });
+
+  window.removeEventListener('keydown', moveDodger);
+  alert("YOU LOSE!");
+ }
 /**
  * @param {string} p The position property
  * @returns {number} The position as an integer (without 'px')
